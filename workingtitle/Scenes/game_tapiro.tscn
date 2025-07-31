@@ -1,16 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://x7jafmqw5081"]
+[gd_scene load_steps=4 format=4 uid="uid://x7jafmqw5081"]
 
 [ext_resource type="PackedScene" uid="uid://xjauej5cntab" path="res://Scenes/player.tscn" id="1_kwsj0"]
 [ext_resource type="PackedScene" uid="uid://6iy5xn2ixjv1" path="res://shape.tscn" id="2_ke0t5"]
+[ext_resource type="PackedScene" uid="uid://eo57pmp5leni" path="res://ConveyorTiles.tscn" id="2_s3wkd"]
 
 [node name="Game Tapiro" type="Node2D"]
 
 [node name="Player Tapiro" parent="." instance=ExtResource("1_kwsj0")]
-position = Vector2(719, 320)
+position = Vector2(708, 144)
 
-[node name="Node2D" parent="." instance=ExtResource("2_ke0t5")]
-position = Vector2(731, 114)
-mass = 0.02
+[node name="TileMapLayer" parent="." instance=ExtResource("2_s3wkd")]
+position = Vector2(216, 400)
+tile_map_data = PackedByteArray("AAACAAMAAAAAAAAAAQACAAIAAAAAAAAAAQACAAEAAAAAAAAAAQACAAAAAAAAAAAAAQACAP//AAAAAAAAAQACAP7/AAAAAAAAAQACAP3/AAAAAAAAAgADAP3/AAAAAAAAAgAEAP3/AAAAAAAAAgAFAP3/AAAAAAAAAgAGAP3/AAAAAAAAAgAHAP3/AAAAAAAAAgAIAP3/AAAAAAAAAgADAAMAAAAAAAAAAwAEAAMAAAAAAAAAAwAFAAMAAAAAAAAAAwAGAAMAAAAAAAAAAwAHAAMAAAAAAAAAAwAIAAMAAAAAAAAAAwAJAAMAAAAAAAAAAwAJAP3/AAAAAAAABAAJAP7/AAAAAAAABAAJAP//AAAAAAAABAAJAAAAAAAAAAAABAAJAAEAAAAAAAAABAAJAAIAAAAAAAAABAAOAAMAAAAAAAAAAQAOAAIAAAAAAAAAAQAOAAEAAAAAAAAAAQAOAAAAAAAAAAAAAQAOAP//AAAAAAAAAQAOAP7/AAAAAAAAAQAOAP3/AAAAAAAAAwANAP3/AAAAAAAAAwAMAP3/AAAAAAAAAwALAP3/AAAAAAAABAALAP7/AAAAAAAABAALAP//AAAAAAAABAALAAAAAAAAAAAABAALAAEAAAAAAAAABAALAAIAAAAAAAAABAALAAMAAAAAAAAABAALAAQAAAAAAAAAAgAMAAQAAAAAAAAAAgANAAQAAAAAAAAAAgAOAAQAAAAAAAAAAQA=")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(565, 313)
+[node name="RigidBody2D" parent="." instance=ExtResource("2_ke0t5")]
+position = Vector2(293, 316)
+max_speed = 100.0

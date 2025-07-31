@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbbdp3hyeicr4"]
+
+[ext_resource type="Script" uid="uid://c406vyl2n35k0" path="res://Conveyors/ConveyorBelt.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://canb187d185es" path="res://Assets/sqaure.png" id="2_epypp"]
+
+[sub_resource type="Curve2D" id="Curve2D_0hol4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 311, 165, 0, 0, 0, 0, 314, 165, 0, 0, 0, 0, 669, 149, 0, 0, 0, 0, 761, 239, 0, 0, 0, 0, 753, 411, 0, 0, 0, 0, 488, 433, 0, 0, 0, 0, 252, 411, 0, 0, 0, 0, 249, 260, 0, 0, 0, 0, 311, 165)
+}
+point_count = 9
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0e48y")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_0hol4")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(311, 165)
+
+[node name="Sqaure" type="Sprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(4, -2)
+texture = ExtResource("2_epypp")

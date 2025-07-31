@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bva3viav1xgrb"]
+
+[ext_resource type="Script" uid="uid://c406vyl2n35k0" path="res://Conveyors/ConveyorBelt.gd" id="1_upkka"]
+[ext_resource type="PackedScene" uid="uid://c7wsbyiplyr02" path="res://Assets/Tales Animated/tale_up.tscn" id="2_3w6he"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0eav"]
+size = Vector2(32, 32)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_upkka")
+direction = 2
+
+[node name="Tale_Up" parent="." instance=ExtResource("2_3w6he")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_f0eav")
