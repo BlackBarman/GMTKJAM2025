@@ -1,21 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://6iy5xn2ixjv1"]
+[gd_scene load_steps=5 format=3 uid="uid://6iy5xn2ixjv1"]
 
 [ext_resource type="Script" uid="uid://cmtxupceoj122" path="res://Shape.gd" id="1_17iwj"]
 [ext_resource type="Texture2D" uid="uid://dyhqei8w4f4kc" path="res://Assets/x.png" id="2_t2h0s"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t2h0s"]
+rough = true
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enwtc"]
-size = Vector2(10, 10)
+size = Vector2(24, 24)
 
 [node name="RigidBody2D" type="RigidBody2D"]
-mass = 0.5
+scale = Vector2(0.998393, 1)
+physics_material_override = SubResource("PhysicsMaterial_t2h0s")
 gravity_scale = 0.0
+inertia = 1000.0
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 5
 linear_damp_mode = 1
+angular_damp = 100.0
 script = ExtResource("1_17iwj")
-max_speed = 150.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_enwtc")
 
 [node name="X" type="Sprite2D" parent="."]
-scale = Vector2(0.158536, 0.154344)
+scale = Vector2(0.361935, 0.352365)
 texture = ExtResource("2_t2h0s")
