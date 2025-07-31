@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=3 uid="uid://eo57pmp5leni"]
+
+[ext_resource type="PackedScene" uid="uid://bva3viav1xgrb" path="res://Conveyors/ConveyorBelt_Up.tscn" id="1_bc8xq"]
+[ext_resource type="PackedScene" uid="uid://ejsxjs7ywax3" path="res://Conveyors/ConveyorBelt_Right.tscn" id="2_spn0i"]
+[ext_resource type="PackedScene" uid="uid://2rm117tvh0nj" path="res://Conveyors/ConveyorBelt_Left.tscn" id="3_g1qrb"]
+[ext_resource type="PackedScene" uid="uid://cja8euh06oh8j" path="res://Conveyors/ConveyorBelt_Down.tscn" id="4_j5wjf"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_84w7m"]
+resource_name = "Tiles"
+scenes/1/scene = ExtResource("1_bc8xq")
+scenes/2/scene = ExtResource("2_spn0i")
+scenes/3/scene = ExtResource("3_g1qrb")
+scenes/4/scene = ExtResource("4_j5wjf")
+
+[sub_resource type="TileSet" id="TileSet_yp25u"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetScenesCollectionSource_84w7m")
+
+[node name="TileMapLayer" type="TileMapLayer"]
+tile_set = SubResource("TileSet_yp25u")
