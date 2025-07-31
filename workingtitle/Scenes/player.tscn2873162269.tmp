@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=3 uid="uid://xjauej5cntab"]
+
+[ext_resource type="Texture2D" uid="uid://cixwpjrix72cw" path="res://icon.svg" id="1_shuxw"]
+
+[sub_resource type="GDScript" id="GDScript_v0iea"]
+script/source = "extends CharacterBody2D
+
+# Variabili configurabili
+@export var speed: float = 300.0
+@export var acceleration: float = 15.0
+@export var friction: float = 20.0
+
+# Riferimento allo Sprite2D e all'AnimationPlayer
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+var direction: Vector2 = Vector2.ZERO
+
+func _physics_process(delta: float) -> void:
+	# Input per le 8 direzioni (WASD o frecce)
+	direction.x = Input.get_axis(\"ui_left\", \"ui_right\")
+	direction.y = Input.get_axis(\"ui_up\", \"ui_down\")
+	
+	# Normalizza la direzione per evitare movimenti più veloci in diagonale
+	if direction.length() > 0:
+		direction = direction.normalized()
+	
+	# Applica movimento
+	if direction != Vector2.ZERO:
+		velocity = velocity.lerp(direction * speed, acceleration * delta)
+		_update_animation()  # Aggiorna l'animazione
+	else:
+		velocity = velocity.lerp(Vector2.ZERO, friction * delta)
+	
+	move_and_slide()
+
+# Gestione delle animazioni
+func _update_animation() -> void:
+	# Determina la direzione per l'animazione
+	if abs(direction.x) > abs(direction.y):
+		# Destra/Sinistra
+		if direction.x > 0:
+			animation_player.play(\"walk_right\")
+		else:
+			animation_player.play(\"walk_left\")
+	else:
+		# Alto/Basso
+		if direction.y > 0:
+			animation_player.play(\"walk_down\")
+		else:
+			animation_player.play(\"walk_up\")
+	
+	# Se è in diagonale, puoi aggiungere logiche specifiche (opzionale)
+	if direction.x != 0 and direction.y != 0:
+		# Esempio: animazione diagonale (se hai sprite dedicati)
+		pass
+	
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+atlas = ExtResource("1_shuxw")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6t5aa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvnsp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vgqql"]
+radius = 41.3038
+
+[node name="Player Tapiro" type="CharacterBody2D"]
+script = SubResource("GDScript_v0iea")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(502, 250)
+sprite_frames = SubResource("SpriteFrames_6t5aa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(503, 253)
+shape = SubResource("CircleShape2D_vgqql")

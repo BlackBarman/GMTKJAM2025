@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://x7jafmqw5081"]
+
+[ext_resource type="PackedScene" uid="uid://xjauej5cntab" path="res://Scenes/player.tscn" id="1_kwsj0"]
+
+[node name="Game Tapiro" type="Node2D"]
+
+[node name="Player Tapiro" parent="." instance=ExtResource("1_kwsj0")]
+position = Vector2(79, 45)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(172, 122)
