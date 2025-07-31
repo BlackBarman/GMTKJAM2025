@@ -1,37 +1,37 @@
 [gd_scene load_steps=11 format=3 uid="uid://b8n0omhcjlvgc"]
 
-[ext_resource type="Texture2D" uid="uid://dusmuji3vnijk" path="res://Assets/conveyer belt all-0001.png" id="1_gil3n"]
+[ext_resource type="Texture2D" uid="uid://dusmuji3vnijk" path="res://Assets/conveyer belt all-0001.png" id="1_86xoh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hjord"]
-atlas = ExtResource("1_gil3n")
+atlas = ExtResource("1_86xoh")
 region = Rect2(0, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gxdtv"]
-atlas = ExtResource("1_gil3n")
+atlas = ExtResource("1_86xoh")
 region = Rect2(32, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ha1db"]
-atlas = ExtResource("1_gil3n")
+atlas = ExtResource("1_86xoh")
 region = Rect2(64, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vx4gk"]
-atlas = ExtResource("1_gil3n")
+atlas = ExtResource("1_86xoh")
 region = Rect2(96, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cauvm"]
-atlas = ExtResource("1_gil3n")
+atlas = ExtResource("1_86xoh")
 region = Rect2(128, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ldig5"]
-atlas = ExtResource("1_gil3n")
+atlas = ExtResource("1_86xoh")
 region = Rect2(160, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sjcqw"]
-atlas = ExtResource("1_gil3n")
+atlas = ExtResource("1_86xoh")
 region = Rect2(192, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k07hf"]
-atlas = ExtResource("1_gil3n")
+atlas = ExtResource("1_86xoh")
 region = Rect2(224, 128, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0bgfg"]
@@ -63,10 +63,10 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 30.0
+"speed": 5.0
 }]
 
 [node name="tale_left" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_0bgfg")
 autoplay = "default"
-frame_progress = 0.401059
+frame_progress = 0.857029
