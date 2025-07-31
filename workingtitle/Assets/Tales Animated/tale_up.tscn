@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://c7wsbyiplyr02"]
+
+[ext_resource type="Texture2D" uid="uid://dusmuji3vnijk" path="res://Assets/conveyer belt all-0001.png" id="1_5lamv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27hv6"]
+atlas = ExtResource("1_5lamv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mafeq"]
+atlas = ExtResource("1_5lamv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfkj0"]
+atlas = ExtResource("1_5lamv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr30c"]
+atlas = ExtResource("1_5lamv")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13o8d"]
+atlas = ExtResource("1_5lamv")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1u6cw"]
+atlas = ExtResource("1_5lamv")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18fso"]
+atlas = ExtResource("1_5lamv")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfs52"]
+atlas = ExtResource("1_5lamv")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccw62"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27hv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mafeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfkj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr30c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13o8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1u6cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18fso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfs52")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tale_Up" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ccw62")
+autoplay = "default"
+frame_progress = 0.725888

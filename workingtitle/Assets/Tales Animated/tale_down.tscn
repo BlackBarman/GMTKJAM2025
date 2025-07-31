@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://bkvp1bbc6sx2a"]
+
+[ext_resource type="Texture2D" uid="uid://dusmuji3vnijk" path="res://Assets/conveyer belt all-0001.png" id="1_kc0b6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdhvg"]
+atlas = ExtResource("1_kc0b6")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1toi"]
+atlas = ExtResource("1_kc0b6")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d5ku"]
+atlas = ExtResource("1_kc0b6")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fml0s"]
+atlas = ExtResource("1_kc0b6")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3t5d"]
+atlas = ExtResource("1_kc0b6")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kefbt"]
+atlas = ExtResource("1_kc0b6")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1faq"]
+atlas = ExtResource("1_kc0b6")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe7pf"]
+atlas = ExtResource("1_kc0b6")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gcx72"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdhvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1toi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1d5ku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fml0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3t5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kefbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1faq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fe7pf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="tale_down" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_gcx72")
+autoplay = "default"
+frame = 5
+frame_progress = 0.360604
