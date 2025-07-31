@@ -63,9 +63,10 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 30.0
 }]
 
 [node name="tale_left" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_0bgfg")
 autoplay = "default"
+frame_progress = 0.401059

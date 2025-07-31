@@ -63,10 +63,10 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 30.0
 }]
 
 [node name="Tale_Up" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_ccw62")
 autoplay = "default"
-frame_progress = 0.725888
+frame_progress = 0.624905
