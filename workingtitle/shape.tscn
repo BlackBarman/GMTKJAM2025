@@ -1,8 +1,20 @@
-[gd_scene format=3 uid="uid://dckptvujqvpb4"]
+[gd_scene load_steps=4 format=3 uid="uid://6iy5xn2ixjv1"]
 
-[node name="Shape" type="Node2D"]
+[ext_resource type="Script" uid="uid://cmtxupceoj122" path="res://Shape.gd" id="1_17iwj"]
+[ext_resource type="Texture2D" uid="uid://cixwpjrix72cw" path="res://icon.svg" id="2_17iwj"]
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(-5, -10)
-color = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(14, 18, 23, 19, 22, 26, 13, 25)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enwtc"]
+size = Vector2(64, 64)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(270, 188)
+linear_velocity = Vector2(0, 5)
+linear_damp_mode = 1
+script = ExtResource("1_17iwj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_enwtc")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_17iwj")

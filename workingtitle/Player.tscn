@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://40ar1wcgg7xh"]
+[gd_scene load_steps=3 format=3 uid="uid://cd6hxf21qmau"]
+
+[ext_resource type="PackedScene" uid="uid://6iy5xn2ixjv1" path="res://Shape.tscn" id="1_kpjcp"]
+[ext_resource type="PackedScene" uid="uid://xjauej5cntab" path="res://Scenes/player.tscn" id="2_kne1u"]
 
 [node name="Game tapiro" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_kpjcp")]
+position = Vector2(386, 217)
+
+[node name="Player Tapiro" parent="." instance=ExtResource("2_kne1u")]
+position = Vector2(413, 369)
