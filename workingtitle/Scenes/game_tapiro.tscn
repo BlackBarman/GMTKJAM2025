@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://x7jafmqw5081"]
 
 [ext_resource type="PackedScene" uid="uid://xjauej5cntab" path="res://Scenes/player.tscn" id="1_kwsj0"]
-[ext_resource type="PackedScene" uid="uid://6iy5xn2ixjv1" path="res://Shape.tscn" id="2_ke0t5"]
+[ext_resource type="PackedScene" uid="uid://6iy5xn2ixjv1" path="res://shape.tscn" id="2_ke0t5"]
 
 [node name="Game Tapiro" type="Node2D"]
 
