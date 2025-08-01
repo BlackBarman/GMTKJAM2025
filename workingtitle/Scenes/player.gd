@@ -8,7 +8,12 @@ extends CharacterBody2D
 
 var direction: Vector2 = Vector2.ZERO  # Direzione di input
 
+func _ready() -> void:
+	physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_ON
+
+
 func _physics_process(delta: float) -> void:
+	
 	# 1. Ottieni l'input (8 direzioni)
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")

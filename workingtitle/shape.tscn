@@ -12,15 +12,14 @@ size = Vector2(24, 24)
 
 [node name="RigidBody2D" type="RigidBody2D"]
 scale = Vector2(0.998393, 1)
-mass = 20.0
 physics_material_override = SubResource("PhysicsMaterial_t2h0s")
 gravity_scale = 0.0
 inertia = 1000.0
 continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 5
-linear_damp_mode = 1
-angular_damp = 100.0
+linear_damp = 20.0
+angular_damp = 75.0
 script = ExtResource("1_17iwj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
