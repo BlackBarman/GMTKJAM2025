@@ -1,13 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://r50e6mg8572u"]
+[gd_scene load_steps=2 format=3 uid="uid://r50e6mg8572u"]
 
 [ext_resource type="Script" uid="uid://c406vyl2n35k0" path="res://Conveyors/ConveyorBelt.gd" id="1_ucexd"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0eav"]
-size = Vector2(90.1288, 180)
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_ucexd")
 direction = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_f0eav")
