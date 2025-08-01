@@ -23,6 +23,7 @@ size = Vector2(51, 55)
 
 [node name="Player Tapiro" type="CharacterBody2D"]
 script = ExtResource("1_cvnsp")
+push_strength = 200.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.601563, 0.601563)

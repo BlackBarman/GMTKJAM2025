@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdpuhxoqomcbc"]
+[gd_scene load_steps=4 format=3 uid="uid://bdpuhxoqomcbc"]
 
 [ext_resource type="Script" uid="uid://dfvfj0dr163eq" path="res://Spawner.gd" id="1_mimr8"]
+[ext_resource type="PackedScene" uid="uid://6iy5xn2ixjv1" path="res://shape.tscn" id="2_5q6u0"]
+[ext_resource type="Texture2D" uid="uid://cixwpjrix72cw" path="res://icon.svg" id="2_gnend"]
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_mimr8")
+block_scene = ExtResource("2_5q6u0")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 4.0
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-9.53674e-07, 2.38419e-07)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_gnend")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -10,10 +10,19 @@ enum Shape {
 	SQUARE,
 }
 
+var  textures: Array[Texture2D] = [
+	preload("res://Assets/x.png"),
+	preload("res://Assets/triangle.png"),
+	preload("res://Assets/circle.png"),
+	preload("res://Assets/sqaure.png"),
+	]
 
 
-func _ready() -> void:
-	pass
+
+
+func _set_shape(new_shape: Shape) -> void:
+	var shape = new_shape
+	%X.texture = textures[int(shape)]
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	# Cap speed manually

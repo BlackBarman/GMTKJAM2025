@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=4 uid="uid://x7jafmqw5081"]
 
 [ext_resource type="PackedScene" uid="uid://xjauej5cntab" path="res://Scenes/player.tscn" id="1_kwsj0"]
-[ext_resource type="PackedScene" uid="uid://6iy5xn2ixjv1" path="res://shape.tscn" id="2_ke0t5"]
 [ext_resource type="PackedScene" uid="uid://eo57pmp5leni" path="res://ConveyorTiles.tscn" id="2_s3wkd"]
 [ext_resource type="PackedScene" uid="uid://r50e6mg8572u" path="res://Conveyors/ConveyorBelt.tscn" id="3_2ve0o"]
+[ext_resource type="PackedScene" uid="uid://bdpuhxoqomcbc" path="res://Spawner.tscn" id="5_nj3sn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nj3sn"]
 size = Vector2(32, 224)
@@ -14,23 +14,22 @@ size = Vector2(352, 32)
 [node name="Game Tapiro" type="Node2D"]
 
 [node name="TileMapLayer" parent="." instance=ExtResource("2_s3wkd")]
+position = Vector2(232, 80)
 tile_map_data = PackedByteArray("AAAMAAcAAQAAAAAAAQAMAAYAAQAAAAAAAQAMAAUAAQAAAAAAAQAMAAQAAQAAAAAAAQAMAAMAAQAAAAAAAQAMAAgAAQAAAAAAAQAMAAkAAQAAAAAAAQAMAAoAAQAAAAAAAgALAAoAAQAAAAAAAgAKAAoAAQAAAAAAAgAJAAoAAQAAAAAAAgAIAAoAAQAAAAAAAgAHAAoAAQAAAAAAAgAGAAoAAQAAAAAAAgAFAAoAAQAAAAAAAgAEAAoAAQAAAAAAAgADAAoAAQAAAAAAAgACAAoAAQAAAAAAAgALAAMAAQAAAAAAAwAKAAMAAQAAAAAAAwAJAAMAAQAAAAAAAwAIAAMAAQAAAAAAAwAHAAMAAQAAAAAAAwAGAAMAAQAAAAAAAwAFAAMAAQAAAAAAAwAEAAMAAQAAAAAAAwADAAMAAQAAAAAAAwACAAMAAQAAAAAAAwABAAMAAQAAAAAAAwABAAoAAQAAAAAABAABAAkAAQAAAAAABAABAAgAAQAAAAAABAABAAcAAQAAAAAABAABAAYAAQAAAAAABAABAAUAAQAAAAAABAABAAQAAQAAAAAABAA=")
 
 [node name="Player Tapiro" parent="." instance=ExtResource("1_kwsj0")]
-position = Vector2(545, 363)
+position = Vector2(777, 443)
 push_strength = 50.0
 
-[node name="RigidBody2D" parent="." instance=ExtResource("2_ke0t5")]
-position = Vector2(176, 112)
-max_speed = 50.0
-
 [node name="UpBelt" parent="." instance=ExtResource("3_2ve0o")]
+position = Vector2(232, 80)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="UpBelt"]
 position = Vector2(48, 240)
 shape = SubResource("RectangleShape2D_nj3sn")
 
 [node name="Right belt" parent="." instance=ExtResource("3_2ve0o")]
+position = Vector2(232, 80)
 direction = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right belt"]
@@ -38,7 +37,7 @@ position = Vector2(208, 112)
 shape = SubResource("RectangleShape2D_2ve0o")
 
 [node name="Down belt" parent="." instance=ExtResource("3_2ve0o")]
-position = Vector2(2, 14)
+position = Vector2(234, 94)
 direction = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Down belt"]
@@ -46,9 +45,12 @@ position = Vector2(398, 194)
 shape = SubResource("RectangleShape2D_nj3sn")
 
 [node name="Left belt" parent="." instance=ExtResource("3_2ve0o")]
-position = Vector2(168, 117)
+position = Vector2(400, 197)
 direction = 1
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Left belt"]
 position = Vector2(72, 219)
 shape = SubResource("RectangleShape2D_2ve0o")
+
+[node name="Spawner" parent="." instance=ExtResource("5_nj3sn")]
+position = Vector2(304, 192)
