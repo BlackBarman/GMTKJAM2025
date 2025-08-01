@@ -19,7 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(78, 76)
+size = Vector2(51, 55)
 
 [node name="Player Tapiro" type="CharacterBody2D"]
 script = ExtResource("1_cvnsp")
@@ -29,4 +29,5 @@ scale = Vector2(0.601563, 0.601563)
 sprite_frames = SubResource("SpriteFrames_6t5aa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_cvnsp")

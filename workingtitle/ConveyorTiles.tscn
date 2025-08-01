@@ -1,12 +1,12 @@
 [gd_scene load_steps=7 format=3 uid="uid://eo57pmp5leni"]
 
-[ext_resource type="PackedScene" uid="uid://bva3viav1xgrb" path="res://Conveyors/ConveyorBelt_Up.tscn" id="1_bc8xq"]
-[ext_resource type="PackedScene" uid="uid://ejsxjs7ywax3" path="res://Conveyors/ConveyorBelt_Right.tscn" id="2_spn0i"]
-[ext_resource type="PackedScene" uid="uid://2rm117tvh0nj" path="res://Conveyors/ConveyorBelt_Left.tscn" id="3_g1qrb"]
-[ext_resource type="PackedScene" uid="uid://cja8euh06oh8j" path="res://Conveyors/ConveyorBelt_Down.tscn" id="4_j5wjf"]
+[ext_resource type="PackedScene" uid="uid://bkvp1bbc6sx2a" path="res://Assets/Tales Animated/tale_down.tscn" id="1_bc8xq"]
+[ext_resource type="PackedScene" uid="uid://b8n0omhcjlvgc" path="res://Assets/Tales Animated/tale_left.tscn" id="2_spn0i"]
+[ext_resource type="PackedScene" uid="uid://bvhxpmpxmm8sk" path="res://Assets/Tales Animated/tale_right.tscn" id="3_g1qrb"]
+[ext_resource type="PackedScene" uid="uid://c7wsbyiplyr02" path="res://Assets/Tales Animated/tale_up.tscn" id="4_j5wjf"]
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_84w7m"]
-resource_name = "Tiles"
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_iwu4n"]
+resource_name = "Animated Tiles"
 scenes/1/scene = ExtResource("1_bc8xq")
 scenes/2/scene = ExtResource("2_spn0i")
 scenes/3/scene = ExtResource("3_g1qrb")
@@ -14,7 +14,7 @@ scenes/4/scene = ExtResource("4_j5wjf")
 
 [sub_resource type="TileSet" id="TileSet_yp25u"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetScenesCollectionSource_84w7m")
+sources/1 = SubResource("TileSetScenesCollectionSource_iwu4n")
 
 [node name="TileMapLayer" type="TileMapLayer"]
 tile_set = SubResource("TileSet_yp25u")
