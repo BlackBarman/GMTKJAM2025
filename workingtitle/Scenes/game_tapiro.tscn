@@ -21,7 +21,7 @@ position = Vector2(545, 363)
 push_strength = 50.0
 
 [node name="RigidBody2D" parent="." instance=ExtResource("2_ke0t5")]
-position = Vector2(442, 18)
+position = Vector2(176, 112)
 max_speed = 50.0
 
 [node name="UpBelt" parent="." instance=ExtResource("3_2ve0o")]

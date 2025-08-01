@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dyhqei8w4f4kc" path="res://Assets/x.png" id="2_t2h0s"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t2h0s"]
-friction = 0.0
+friction = 0.5
 rough = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enwtc"]
@@ -14,11 +14,10 @@ size = Vector2(24, 24)
 scale = Vector2(0.998393, 1)
 physics_material_override = SubResource("PhysicsMaterial_t2h0s")
 gravity_scale = 0.0
-inertia = 1000.0
 continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 5
-linear_damp = 20.0
+linear_damp = 1.0
 angular_damp = 75.0
 script = ExtResource("1_17iwj")
 
@@ -26,5 +25,6 @@ script = ExtResource("1_17iwj")
 shape = SubResource("RectangleShape2D_enwtc")
 
 [node name="X" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 scale = Vector2(0.361935, 0.352365)
 texture = ExtResource("2_t2h0s")

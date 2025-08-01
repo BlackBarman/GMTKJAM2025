@@ -2,5 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6vbwec5arhug" path="res://Deleter.gd" id="1_xyoid"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Area2D"]
 script = ExtResource("1_xyoid")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
